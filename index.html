@@ -23,24 +23,28 @@
               <i>{{post.timestamp | date : format : timezone}}</i>
               <p>{{post.body}}</p>
               <i>{{post.author}}</i>
-<!--               <p>Karma: {{post.karma}}</p>
-              <span ng-click="vote(post.id, 'up')" class="glyphicon glyphicon-thumbs-up"></span>
-              <span ng-click="vote(post.id, 'down')" class="glyphicon glyphicon-thumbs-down"></span>
+
+              <p>Karma: {{post.karma}}</p>
+              <span ng-click="vote(post, 'up')" class="glyphicon glyphicon-thumbs-up"></span>
+              
+              <span ng-click="vote(post, 'down')" class="glyphicon glyphicon-thumbs-down"></span>
               <hr>
-              <form ng-submit="submitComment(post.id, post.commentForm)">
+
+              <form ng-submit="submitComment(post, post.commentForm)">
                 <div class="form-group">
                   <textarea class="form-control" placeholder="comment" ng-model="post.commentForm"></textarea>
                 </div>
                 <div class="form-group">
-                  <button class="btn btn-danger btn-block">Submit</button>
+                  <button class="btn btn-danger btn-block" ng-click="clearIt">Submit</button>
                 </div>
               </form>
               <div ng-repeat="item in post.comments">
-                {{item.comments}}
+                {{item.comment}}
                 <hr>
               </div>
             </div>
- -->          </div>
+
+          </div>
           <div class="panel-footer">
             This is the panel footer.
           </div>
