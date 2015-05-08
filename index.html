@@ -38,7 +38,7 @@
                   <button class="btn btn-danger btn-block" ng-click="clearIt">Submit</button>
                 </div>
               </form>
-              <div ng-repeat="item in post.comments">
+              <div ng-repeat="item in post.comments track by $index">
                 {{item.comment}}
                 <hr>
               </div>
